@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Задача 8.4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Задача 8.4</h1>
+        <h3>Входные данные:</h3>
+        <p>
+            Q<sub>1</sub><sup>D</sup> = 
+            <input type="text" placeholder="" id="a1" value="160">
+            - 
+            <input type="text" placeholder="" id="kp1" value="1">
+            P<sub>1</sub>;
+        </p>
+        <p>
+            Q<sub>2</sub><sup>D</sup>
+            = 
+            <input type="text" placeholder="" id="a2" value="160">
+            - 
+            <input type="text" placeholder="" id="kp2" value="2">
+            P<sub>2</sub>;
+        </p>
+        <p>
+            TC = 
+            <input type="text" placeholder="" id="tca" value="5">
+             + 
+            <input type="text" placeholder="" id="tcb" value="5">
+            Q + 
+            <input type="text" id="tcc" value="0.25">
+            Q<sup>2</sup>
+        </p>
+        <button type="button" onclick="generate()">Генерация</button>
+        <button type="button" onclick="calculate()">Решение</button>
+        <div id="answer" style="display: none">
+            <h3>Ответ:</h3>
+            <p>
+                P<sub>1</sub> = <span id="p1"></span><br>
+                P<sub>2</sub> = <span id="p2"></span><br>
+                π = <span id="pi"></span>
+            </p>
+            <h4>При запрете ценовой дискриминации:</h4>
+            <p id="left" class="segment disabled">
+                Левый сегмент: <br>
+                Q = <span id="ql"></span><br>
+                P = <span id="pl"></span><br>
+                π = <span id="pil"></span>
+            </p>
+            <p id="right" class="segment disabled">
+                Правый сегмент: <br>
+                Q = <span id="qr"></span><br>
+                P = <span id="pr"></span><br>
+                π = <span id="pir"></span>
+            </p>
+        </div>
+    </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/gauss.js"></script>
+    <script src="js/gen.js"></script>
+    <script src="js/calc.js"></script>    
+</html>
